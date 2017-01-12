@@ -1,0 +1,24 @@
+{
+  "name": "sketch-plane",
+  "version": "0.1.0",
+  "description": "",
+  "main": "bin/splan",
+  "bin": {
+    "splan": "bin/splan"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yxxx5/sketch-plane.git"
+  },
+  "author": "yxxx5",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "download-git-repo": "^0.2.1",
+    "git-downloader": "^1.0.0",
+    "ora": "^0.3.0"
+  }
+}

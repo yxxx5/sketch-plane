@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+const program = require('commander');
+const init = require('../lib/init');
+const list = require('../lib/list');
+const add = require('../lib/add');
+const remove = require('../lib/remove');
+const remote = require('../lib/remote');
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]');
+
+program
+  .command('init')
+  .description('generate a new project from a template')
+  .alias('i')
+  .arguments('<template> [project]')
+  .action(init);
+
+program
+  .command('list')
+  .description('list available templates')
+  .alias('l')
+  .action(list);
+
+program
+  .command('add')
+  .description('add a template')
+  .alias('a')
+  .arguments('<name> <repo> [desc]')
+  .action(add);
+
+program
+  .command('remove')
+  .description('remove a template')
+  .arguments('<name>')
+  .alias('rm')
+  .action(remove);
+
+program
+  .command('remote')
+  .description('remote -> todo')
+  .arguments('<url>')
+  .alias('r')
+  .action(remote);
+
+program.parse(process.argv);
+
+if(!program.args.length){
+  program.help();
+}
