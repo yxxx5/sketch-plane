@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+const program = require('commander');
+const add = require('../lib/remote-add');
+const list = require('../lib/remote-list');
+const remove = require('../lib/remote-remove');
+const update = require('../lib/remote-update');
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]');
+
+program
+  .command('add')
+  .description('')
+  .arguments('<name> <url>')
+  .action(add);
+
+program
+  .command('list')
+  .description('')
+  .action(list);
+
+program
+  .command('remove')
+  .description('')
+  .action(remove);
+
+program
+  .command('update')
+  .description('')
+  .arguments('<name> <url>')
+  .action(update);
+
+program.parse(process.argv);
+
+if(!program.args.length){
+  program.help();
+}

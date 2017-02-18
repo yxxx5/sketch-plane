@@ -4,7 +4,7 @@ const init = require('../lib/init');
 const list = require('../lib/list');
 const add = require('../lib/add');
 const remove = require('../lib/remove');
-const remote = require('../lib/remote');
+//const remote = require('../lib/remote');
 
 program
   .version(require('../package').version)
@@ -37,12 +37,12 @@ program
   .alias('rm')
   .action(remove);
 
-program
+/*program
   .command('remote')
   .description('remote -> todo')
-  .arguments('<url>')
+  .arguments('[method] [name] [url]')
   .alias('r')
-  .action(remote);
+  .action(remote);*/
 
 program.parse(process.argv);
 
