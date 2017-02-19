@@ -1,4 +1,4 @@
-##前端项目脚手架工具
+##SCAFFOLDING TOOL FOR WEB APP
 
 #### install
 
