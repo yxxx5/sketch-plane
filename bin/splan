@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const program = require('commander');
 const init = require('../lib/init');
 const list = require('../lib/list');
@@ -6,38 +7,38 @@ const add = require('../lib/add');
 const remove = require('../lib/remove');
 
 program
-  .version(require('../package').version)
-  .usage('<command> [options]');
+    .version(require('../package').version)
+    .usage('<command> [options]');
 
 program
-  .command('init')
-  .description('generate a new project from a template')
-  .alias('i')
-  .arguments('<template> [project]')
-  .action(init);
+    .command('init')
+    .description('generate a new project from a template')
+    .alias('i')
+    .arguments('<template> [project]')
+    .action(init);
 
 program
-  .command('list')
-  .description('list available templates')
-  .alias('l')
-  .action(list);
+    .command('list')
+    .description('list available templates')
+    .alias('l')
+    .action(list);
 
 program
-  .command('add')
-  .description('add a template')
-  .alias('a')
-  .arguments('<name> <repo> [desc]')
-  .action(add);
+    .command('add')
+    .description('add a template')
+    .alias('a')
+    .arguments('<name> <repo> [desc]')
+    .action(add);
 
 program
-  .command('remove')
-  .description('remove a template')
-  .arguments('<name>')
-  .alias('rm')
-  .action(remove);
+    .command('remove')
+    .description('remove a template')
+    .arguments('<name>')
+    .alias('rm')
+    .action(remove);
 
 program.parse(process.argv);
 
-if(!program.args.length){
-  program.help();
+if (!program.args.length) {
+    program.help();
 }

@@ -1,13 +1,15 @@
 {
   "name": "splan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "bin/splan",
   "bin": {
     "splan": "bin/splan",
     "splan-remote": "bin/splan-remote"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jest test/test.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/yxxx5/sketch-plane.git"
@@ -18,8 +20,11 @@
     "axios": "^0.15.3",
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
-    "download-git-repo": "^0.2.1",
     "git-downloader": "^1.0.0",
+    "git-repo-downloader": "0.0.3",
     "ora": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
   }
 }
