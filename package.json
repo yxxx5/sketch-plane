@@ -20,7 +20,6 @@
     "axios": "^0.15.3",
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
-    "git-downloader": "^1.0.0",
     "git-repo-downloader": "0.0.3",
     "ora": "^0.3.0"
   },
