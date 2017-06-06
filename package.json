@@ -8,7 +8,7 @@
     "splan-remote": "bin/splan-remote"
   },
   "scripts": {
-    "preinstall": "node lib/preinstall.js",
+    "postinstall": "node lib/install.js",
     "test": "jest test/test.js"
   },
   "repository": {
