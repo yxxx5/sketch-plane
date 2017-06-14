@@ -13,29 +13,29 @@ program
 
 program
     .command('add')
-    .description('')
+    .description('add remote origin')
     .arguments('<name> <url>')
     .action(add)
 
 program
     .command('list')
-    .description('')
+    .description('list available remote origin')
     .action(list)
 
 program
     .command('remove')
     .arguments('<name>')
-    .description('')
+    .description('remove origin')
     .action(remove)
 
 program
     .command('update')
-    .description('')
+    .description('pull remote templates')
     .action(update)
 
 program
     .command('push')
-    .description('')
+    .description('push templates description to remote origin')
     .arguments('<origin> <name> <repository> <description>')
     .action(push)
 

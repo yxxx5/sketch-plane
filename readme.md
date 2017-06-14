@@ -17,6 +17,17 @@ splan <command> [options]
     remote      remote templates
     help [cmd]  display help for [cmd]
 
+splan-remote <command> [options]
+
+  Commands:
+
+    list        list available remote origin
+    add         add remote origin
+    remove      remove remote origin
+    update      pull templates
+    push        push templates description to remote origin
+    help [cmd]  display help for [cmd]
+
   Options:
 
     -h, --help     output usage information
